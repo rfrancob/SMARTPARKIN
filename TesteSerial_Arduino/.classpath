@@ -2,39 +2,50 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/RXTXcomm.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/gson-2.2.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/commons-codec-1.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/commons-lang3-3.2.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/commons-logging-1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/cxf-api-2.6.10.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/cxf-rt-bindings-xml-2.6.10.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/cxf-rt-core-2.6.10.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/cxf-rt-frontend-jaxrs-2.6.10.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/cxf-rt-transports-http-2.6.10.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/flexjson-2.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/hawtbuf-1.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/hawtdb-1.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/hawtdispatch-1.17.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/hawtdispatch-transport-1.17.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/jackson-core-asl-1.9.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/jackson-core-lgpl-1.9.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/jackson-jaxrs-1.9.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/jackson-mapper-asl-1.9.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/jackson-mapper-lgpl-1.9.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/jackson-mrbean-1.9.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/jackson-smile-1.9.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/jackson-xc-1.9.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/javassist-3.12.1.GA.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/jsondoc-core-1.0.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/jsr311-api-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/junit-4.11.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/log4j-1.2.17.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/mqtt-client-1.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/reflections-0.9.8.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/ssap-2.9.0-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dgsilvas/Downloads/gson-2.2.2.jar/wsdl4j-1.6.3.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/commons-codec-1.5.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/commons-lang3-3.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/cxf-api-2.6.10.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/cxf-rt-bindings-xml-2.6.10.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/cxf-rt-core-2.6.10.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/cxf-rt-frontend-jaxrs-2.6.10.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/cxf-rt-transports-http-2.6.10.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/dom4j-1.6.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/flexjson-2.1.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/hawtbuf-1.9.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/hawtdb-1.6.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/hawtdispatch-1.17.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/hawtdispatch-transport-1.17.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jackson-core-asl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jackson-core-asl-1.9.13-sources.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jackson-core-lgpl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jackson-core-lgpl-1.9.13-javadoc.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jackson-core-lgpl-1.9.13-sources.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jackson-jaxrs-1.9.13.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jackson-mapper-asl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jackson-mapper-lgpl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jackson-mrbean-1.9.13.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jackson-smile-1.9.13.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jackson-xc-1.9.13.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jackson-xc-1.9.13-sources.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/java-json-schema.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/javassist-3.12.1.GA.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/javax.wsdl-1.5.1.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jsondoc-core-1.0.2.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/junit-3.7.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/mqtt-client-1.5.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/reflections-0.9.8.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/RXTXcomm.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/ssap-2.9.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/Tidy-1.jar"/>
+	<classpathentry kind="lib" path="D:/ARQUIVOS/PROJETO SMART PARK/SMARTPARKIN/EjKpJava/TestApi/lib/wsdl4j-1.6.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
