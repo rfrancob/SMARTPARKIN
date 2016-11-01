@@ -1,0 +1,44 @@
+<ion-view view-title="Cadastro">
+  <ion-content>
+    <ion-list>
+        <div>
+          <form>
+              <label class="item item-input">
+                  <span class="input-label">Nome</span>
+                  <input type="text" ng-model="user.nome">
+              </label>
+              <label class="item item-input">
+                  <span class="input-label">CPF</span>
+                  <input type="text" ng-model="user.cpf">
+              </label>
+              <label class="item item-input">
+                  <span class="input-label">E-mail</span>
+                  <input type="text" ng-model="user.email">
+              </label>
+              <label class="item item-input">
+                  <span class="input-label">Endereço</span>
+                  <input type="text" ng-model="user.end">
+              </label>
+              <label class="item item-input">
+                  <span class="input-label">Complemento</span>
+                  <input type="text" ng-model="user.compl">
+              </label>
+              <label class="item item-input">
+                  <span class="input-label">Bairro</span>
+                  <input type="text" ng-model="user.bairro">
+              </label>
+              <label class="item item-input">
+                  <span class="input-label">CEP</span>
+                  <input type="text" ng-model="user.cep">
+              </label>
+            <button  class="ion-archive" ng-click="salvar()"> Salvar</button>
+            <ion-nav-buttons side="primary">
+              <button class="btn btn-danger btn-block" >
+                Salvar
+              </button>
+            </ion-nav-buttons>
+          </form>
+        </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
