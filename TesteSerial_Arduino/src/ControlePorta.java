@@ -100,41 +100,41 @@ public class ControlePorta {
 
 
 			if(!"".equals(stringToParse)){
-   			java.util.Date date= new java.util.Date();
-				    	JsonParser jsonParser = new JsonParser();
-				    	JsonElement element = jsonParser.parse(stringToParse);
-				        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//dd/MM/yyyy
-				        Date now = new Date();
-				        String strDate = sdfDate.format(now);
-				    	element.getAsJsonObject().addProperty("time", strDate);
-				        element.getAsJsonObject().addProperty("estacionado", 0);
+				java.util.Date date= new java.util.Date();
+				JsonParser jsonParser = new JsonParser();
+				JsonElement element = jsonParser.parse(stringToParse);
+				SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//dd/MM/yyyy
+				Date now = new Date();
+				String strDate = sdfDate.format(now);
+				element.getAsJsonObject().addProperty("time", strDate);
+				element.getAsJsonObject().addProperty("estacionado", 0);
 
 
-				        if(element.getAsJsonObject().get("key").getAsJsonArray().get(1).getAsInt() != 0 && element.getAsJsonObject().get("ocupada").getAsInt() == 1 ){
-				        if(first == 0){
-				        oldElement = element;
-				        first = 1;
-				        }
-				        if(oldElement != null){
-				        	long time = TimeTeste.getTimeDiference(oldElement, element);
-					    	element.getAsJsonObject().addProperty("estacionado", time);
-				        }
-				        }
-				        
-				        if(element.getAsJsonObject().get("ocupada").getAsInt() == 0){
-				        first = 0;
-				        oldElement = null;
+				if(element.getAsJsonObject().get("key").getAsJsonArray().get(1).getAsInt() != 0 && element.getAsJsonObject().get("ocupada").getAsInt() == 1 ){
+					if(first == 0){
+						oldElement = element;
+						first = 1;
+					}
+					if(oldElement != null){
+						long time = TimeTeste.getTimeDiference(oldElement, element);
+						element.getAsJsonObject().addProperty("estacionado", time);
+					}
+				}
 
-				        }
-				        
-				    	con.getSsapResourceMedida().setData("{\"Vagas\":" + element.toString()+"}");
-						con.getApi().insert(con.getSsapResourceMedida());
+				if(element.getAsJsonObject().get("ocupada").getAsInt() == 0){
+					first = 0;
+					oldElement = null;
 
-						Response responseInsert=con.getApi().insert(con.getSsapResourceMedida());
-						if(responseInsert.getStatus()!=200){
-							System.out.println("Error Insertando");
-						}
-				    	System.out.println(element.toString());
+				}
+
+				con.getSsapResourceMedida().setData("{\"Vagas\":" + element.toString()+"}");
+				con.getApi().insert(con.getSsapResourceMedida());
+
+				Response responseInsert=con.getApi().insert(con.getSsapResourceMedida());
+				if(responseInsert.getStatus()!=200){
+					System.out.println("Error Insertando");
+				}
+				System.out.println(element.toString());
 			}else{
 				System.out.println("Erro de Leitura");
 			}
