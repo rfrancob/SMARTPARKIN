@@ -5,6 +5,10 @@ import gnu.io.SerialPort;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.ws.rs.core.Response;
 
@@ -19,7 +23,8 @@ public class ControlePorta {
 	private int taxa;
 	private String portaCOM;
 	private ConnectionFactory con;
-
+	private JsonElement oldElement;
+	private int first = 0;
 	/**
 	 * Construtor da classe ControlePorta
 	 * @param portaCOM - Porta COM que será utilizada para enviar os dados para o arduino
@@ -95,26 +100,53 @@ public class ControlePorta {
 
 
 			if(!"".equals(stringToParse)){
-			stringToParse = "{\"KpVagaTeste\":" + stringToParse + "}"; 
-			System.out.print(stringToParse);
-			con.getSsapResourceMedida().setData(stringToParse);
-			con.getApi().insert(con.getSsapResourceMedida());
+   			java.util.Date date= new java.util.Date();
+				    	JsonParser jsonParser = new JsonParser();
+				    	JsonElement element = jsonParser.parse(stringToParse);
+				        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//dd/MM/yyyy
+				        Date now = new Date();
+				        String strDate = sdfDate.format(now);
+				    	element.getAsJsonObject().addProperty("time", strDate);
+				        element.getAsJsonObject().addProperty("estacionado", 0);
 
-			Response responseInsert=con.getApi().insert(con.getSsapResourceMedida());
-			if(responseInsert.getStatus()!=200){
-				System.out.println("Error Insertando");
-			}
+
+				        if(element.getAsJsonObject().get("key").getAsJsonArray().get(1).getAsInt() != 0 && element.getAsJsonObject().get("ocupada").getAsInt() == 1 ){
+				        if(first == 0){
+				        oldElement = element;
+				        first = 1;
+				        }
+				        if(oldElement != null){
+				        	long time = TimeTeste.getTimeDiference(oldElement, element);
+					    	element.getAsJsonObject().addProperty("estacionado", time);
+				        }
+				        }
+				        
+				        if(element.getAsJsonObject().get("ocupada").getAsInt() == 0){
+				        first = 0;
+				        oldElement = null;
+
+				        }
+				        
+				    	con.getSsapResourceMedida().setData("{\"Vagas\":" + element.toString()+"}");
+						con.getApi().insert(con.getSsapResourceMedida());
+
+						Response responseInsert=con.getApi().insert(con.getSsapResourceMedida());
+						if(responseInsert.getStatus()!=200){
+							System.out.println("Error Insertando");
+						}
+				    	System.out.println(element.toString());
 			}else{
 				System.out.println("Erro de Leitura");
 			}
 
 			//FactorySofiaJSON.SalvaJSON(stringToParse);
 
-			//	    	JsonParser jsonParser = new JsonParser();
-			//	    	JsonElement element = jsonParser.parse(stringToParse);
-			//	    	System.out.println(element);
+
 		} catch (IOException ex) {
 			System.out.println("Não foi possível enviar o dado. \nEnviar dados");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	} 
 }

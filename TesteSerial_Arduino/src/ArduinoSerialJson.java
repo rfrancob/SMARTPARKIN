@@ -1,6 +1,20 @@
+
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+
+import com.google.gson.JsonElement;
+
+
+
+
 
 public class ArduinoSerialJson {
+	
+	
 
 	public static void main(String[] args) {
 		ControlePorta arduino = new ControlePorta("COM4",9600);
@@ -12,6 +26,7 @@ public class ArduinoSerialJson {
 		        switch(sentence){
 		        case "1":  arduino.enviaDados(1);
 		        		   arduino.recebeDados();
+
 		        break;
 		        case "2":  arduino.enviaDados(2);
 		        		   arduino.recebeDados();

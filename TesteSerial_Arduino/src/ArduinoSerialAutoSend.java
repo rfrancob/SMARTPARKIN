@@ -9,18 +9,11 @@ public class ArduinoSerialAutoSend {
  		    arduino.recebeDados();
 			try {
 			    Thread.sleep(1000);
+			    
 			} catch(InterruptedException ex) {
 			    Thread.currentThread().interrupt();
 			}
-			System.out.println();
-			arduino.enviaDados(2);
- 		    arduino.recebeDados();
 
-			try {
-			    Thread.sleep(1000);
-			} catch(InterruptedException ex) {
-			    Thread.currentThread().interrupt();
-			}
 			
 		}
 	}

@@ -30,7 +30,7 @@ public class ConnectionFactory {
 		}
 		this.ssapResourceMedida =new SSAPResource();
 		ssapResourceMedida.setSessionKey(sessionKey);
-		ssapResourceMedida.setOntology("KpVagaTeste");
+		ssapResourceMedida.setOntology("Vagas");
 		}else{
 			this.sessionKey = null;
 		}
