@@ -1,11 +1,7 @@
 
-import gnu.io.CommPortIdentifier;
-import gnu.io.NoSuchPortException;
-import gnu.io.SerialPort;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,7 +10,10 @@ import javax.ws.rs.core.Response;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import com.indra.sofia2.ssap.kp.implementations.rest.exception.ResponseMapperException;
+
+import gnu.io.CommPortIdentifier;
+import gnu.io.NoSuchPortException;
+import gnu.io.SerialPort;
 
 
 public class ControlePorta {
