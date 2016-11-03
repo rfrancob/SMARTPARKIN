@@ -141,9 +141,12 @@ angular.module('starter.controllers', [])
   ///////////////////////////////////////////////////////////////////////
 })
 
-.controller('ChatsCtrl', function($scope, Chats, $ionicLoading, $timeout) {
+.controller('ChatsCtrl', function($scope, Chats, $ionicLoading, $timeout, $window) {
   $scope.sessionKey = "";
-  $scope.tasklist = localStorage.getItem("tasklist");
+  $scope.tasklist = "";
+  $scope.tasklist2 = "";
+  $scope.tasklist3 = "";
+  $scope.tasklist4 = "";
   $scope.user = {
     nome: "",
     cpf: "",
@@ -156,19 +159,22 @@ angular.module('starter.controllers', [])
   $scope.ontologyInstance = "";
   $scope.resultjson = [];
   $scope.result = [];
-  $scope.transformar = function(){
-    for ( var i = 0; i < localStorage.getItem("tasklist").body.data.length; i++ ) {
-        resultjson = JSON.stringify( localStorage.getItem("tasklist").body.data[ i ], undefined, 2 ) + "\n";   
-        var obj = JSON.parse(resultjson);
-        $scope.result.push(obj);
-    }
-  };
-  alert($scope.result.nome);
+  $scope.transformar = function(){    
+    $scope.tasklist = localStorage.getItem("tasklist");
+    $scope.tasklist2 = localStorage.getItem("tasklist2");
+    $scope.tasklist3 = localStorage.getItem("tasklist3");
+    $scope.tasklist4 = localStorage.getItem("tasklist4");
+  }
+  $scope.reloadPage = function(){$window.location.reload();}
 
   /////////////////////////////Insert////////////////////////////////////
   $scope.salvar = function(){
     $scope.insert($scope.user.nome, $scope.user.cpf, $scope.user.email, $scope.user.end, $scope.user.compl, $scope.user.bairro, $scope.user.cep);
-    localStorage.setItem("tasklist", $scope.ontologyInstance);
+    localStorage.setItem("tasklist", $scope.user.nome);
+    localStorage.setItem("tasklist2", $scope.user.cpf);
+    localStorage.setItem("tasklist3", $scope.user.email);
+    localStorage.setItem("tasklist4", $scope.user.cep); //+";"+$scope.user.cpf+";"+$scope.user.email+";"+$scope.user.cep);
+    $scope.reloadPage();
   };
   $scope.insert = function enviarUsuario(nome, cpf, email, end, compl, bairro, cep){
     $scope.ontologyInstance='{"CadastroUser":{ "nome":"'+nome+'","cpf":"'+cpf+'","email":"'+email+'","end":"'+end+'","compl":"'+compl+'","bairro":"'+bairro+'","cep":"'+cep+'","key":[" "],"estacionado":" "}}';
@@ -193,4 +199,13 @@ angular.module('starter.controllers', [])
     enableFriends: true
   };
   $scope.task = $scope.tasklist;
+})
+
+.controller('tabCtrl', function($scope){
+  $scope.tasklist = localStorage.getItem('tasklist');
+  $scope.mostrar = function(){
+      if(localStorage.getItem('tasklist') == null){
+        return true;
+      }
+  };
 })
